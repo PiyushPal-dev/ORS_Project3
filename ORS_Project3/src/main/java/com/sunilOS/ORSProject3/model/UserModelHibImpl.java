@@ -296,7 +296,7 @@ public class UserModelHibImpl implements UserModelInt
 		msg.setMessage(message);
 		msg.setMessageType(EmailMessage.HTML_MSG);
 				
-		//EmailUtility.sendMail(msg);
+		EmailUtility.sendMail(msg);
 		
 		return false;
 	}
@@ -349,7 +349,7 @@ public class UserModelHibImpl implements UserModelInt
 		msg.setMessage(message);
 		msg.setMessageType(EmailMessage.HTML_MSG);;
 		
-		//EmailUtility.sendMail(msg);
+		EmailUtility.sendMail(msg);
 		
 		return false;
 		
@@ -387,7 +387,7 @@ public class UserModelHibImpl implements UserModelInt
 			msg.setMessage(message);
 			msg.setMessageType(EmailMessage.HTML_MSG);
 			
-			//EmailUtility.sendMail(msg);
+			EmailUtility.sendMail(msg);
 			}}}
 			
 		catch(ApplicationException e)
@@ -398,13 +398,6 @@ public class UserModelHibImpl implements UserModelInt
 		
 		return pk;
 	}
-	
-	public static void main(String[] args) throws ApplicationException 
-	{
-		UserDTO userDto = new UserDTO();
-		UserModelHibImpl userModel = new UserModelHibImpl();
-		
-		userDto = userModel.authenticate("er.anshulnaina@gmail.com", "naina");
-	}
+
 	
 }
